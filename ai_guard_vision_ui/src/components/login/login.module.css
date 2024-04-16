@@ -1,0 +1,53 @@
+
+.formContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 17vh;
+    padding: 4vh;
+    border-radius: 1vh;
+    box-shadow: 0.5vh 0.5vh 1vh rgb(139, 156, 156);
+}
+
+.loginContainer {
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url('https://cdn.pixabay.com/photo/2016/11/05/13/54/travel-1800268_1280.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+input {
+    height: 4vh;
+    width: 25vh;
+    padding: 1vh;
+    border-radius: 0.5vh;
+}
+
+input[type="submit"] {
+    height: 4vh;
+    padding: 1vh 2vh 3.5vh 2vh;
+    border-radius: 1.5vh;
+    font-weight: 500;
+    width: 20vh;
+    background-color: black;
+    color: white;
+}
+button{
+    height: 4vh;
+    width: 25vh;
+    padding: 1vh 2vh;
+    font-weight: 500;
+}
+.active{
+    background-color: cyan;
+}
+.inactive{
+    background-color: teal;
+}

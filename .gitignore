@@ -1,0 +1,12 @@
+Images/*
+*/__pycache__/*
+*.txt
+*/node_modules/*
+.venv/*
+.ipynb_checkpoints/*
+backend/.env/
+ai_guard_vision_ui/.env
+model/kaggle/*
+.env
+/backend/db/__pycache__
+/backend/utils/__pycache__
