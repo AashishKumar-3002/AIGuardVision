@@ -12,8 +12,8 @@ load_dotenv()
 url: str = os.environ.get("SUPABASE_URL")
 key: str = os.environ.get("SUPABASE_KEY")
 supabase: Client = create_client(url, key ,options=ClientOptions(
-    postgrest_client_timeout=90,
-    storage_client_timeout=90
+    postgrest_client_timeout=60,
+    storage_client_timeout=60
   ))
 
 
@@ -33,19 +33,9 @@ def generate_primary_key(email_id, image_data):
 
     return primary_key
 
-def encode_image_to_base64(image_file):
-    try:
-        encoded_string = base64.b64encode(image_file.read())
-        return encoded_string.decode('utf-8')
-    except Exception as e:
-        print("Error encoding image:", e)
-        return None
-
-
-def insert_data(email_id: str, image_data: bytes, classification_type: str, real_score: float, fake_score: float):
+def insert_data(email_id: str, encoded_image: str, classification_type: str, real_score: float, fake_score: float):
     timestamp = str(datetime.datetime.now())
-    encoded_image = encode_image_to_base64(image_path)
-    
+
     if not encoded_image:
         return
 
@@ -102,6 +92,8 @@ def delete_entry(table, image_id=None, email_id=None):
 
 def fetch_data(email_id):
     try:
+        print("Fetching data for email ID:", email_id)
+        print(email_id)
         # Fetch data from the database
         data, count = supabase.table('images') \
             .select('image_id, image_data') \

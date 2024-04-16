@@ -65,3 +65,26 @@ input[type="file"]{
     background-color: cyan;
     padding: 1vh 2vh 4vh 2vh;
 }
+
+.imageScoreContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+.previousUploadsHeading {
+    text-align: center; /* Center the text */
+    font-size: 24px; /* Set the font size */
+    margin-top: 10px; /* Add some top margin for spacing */
+    margin-bottom: 20px; /* Add some bottom margin for spacing */
+}
+
+.imageScoreItem {
+    width: 60vh; /* Set the width of each item */
+    height: 60vh    ; /* Set the height of each item */
+    margin-top : 10vh; /* Add some margin between each item */
+    margin-right: 20vh; /* Add some margin between each item */
+    margin-bottom: 20vh; /* Add some margin between each row */
+    overflow: hidden; /* Hide any overflow if images are larger */
+    border: 1px solid #ccc; /* Add a border around the image */
+    box-shadow: 0px 0px 5px 0px rgba(152, 10, 213, 0.5); /* Add a shadow effect */
+}
