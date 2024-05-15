@@ -17,7 +17,11 @@ supabase: Client = create_client(url, key ,options=ClientOptions(
   ))
 
 
-
+def convert_image_to_base64(image_path):
+    with open(image_path, 'rb') as image_file:
+        encoded_image = base64.b64encode(image_file.read()).decode('utf-8')
+    
+    return encoded_image
 def generate_primary_key(email_id, image_data):
     # Combine email ID and image data into a single string
     combined_data = email_id + image_data
@@ -147,10 +151,11 @@ def fetch_data(email_id):
 
 if __name__ == "__main__":
     email_id = "duhyzy@pelagius.net"
-    image_path = "../../Images/img3.HEIC"
+    image_path = "../../Images/IMG_3697.JPG"
+    encoded_image = convert_image_to_base64(image_path)
     classification_type = "REAL"
     real_score = 0.983701
     fake_score = 0.16299
-    insert_data(email_id, image_path, classification_type, real_score, fake_score)
+    insert_data(email_id, encoded_image, classification_type, real_score, fake_score)
     # data3= fetch_data(email_id)
     # print(data3)

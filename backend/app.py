@@ -41,7 +41,7 @@ def predict():
         # Make sure both scores are present
         if fake_score is None or real_score is None:
             return jsonify({'error': 'Unable_to_extract_confidence_scores_for_both_labels'})
-        
+        print(confidence_score)
         classification = None
         # Adjust the scores so that they add up to 1, keeping the minority score unchanged
         if fake_score > real_score:
@@ -59,10 +59,26 @@ def predict():
         
         response_insertion = insert_data(email_id=email , encoded_image=image_string , classification_type=classification  , real_score=real_score , fake_score=fake_score)
         
+        response_new = []
+        # Print the top two labels and their scores
+        for score in confidence_score:
+            if score['label'] == 'FAKE':
+                score_new = fake_score
+                result = {
+                    "label": score['label'],
+                    "score": fake_score
+                }
+            else:
+                score_new = real_score
+                result = {
+                    "label": score['label'],
+                    "score": real_score
+                }
+            response_new.append(result)
         # Return the prediction
         return jsonify({
             'email': email,
-            'confidence_score': confidence_score
+            'confidence_score': response_new
             })
     except Exception as e:
         return jsonify({'error': str(e)})

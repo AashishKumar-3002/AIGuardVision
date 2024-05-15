@@ -138,7 +138,7 @@ export default function Dashboard() {
                 {userHistory.map((imageData, index) => (
                     <div key={index} className={style.imageScoreItem}>
                         {/* Decode base64 image data and set it as src */}
-                        <img src={`data:image/jpeg;base64, ${imageData.image_data}`} alt={`Image ${index + 1}`} />
+                        <img src={`data:image/jpeg;base64, ${imageData.image_data}`} className={style.f} alt={`Image ${index + 1}`} />
                         {imageData.classifications.map((classification, cIndex) => (
                             <p key={cIndex}>
                                 Classification Type: {classification.classification_type}<br />
