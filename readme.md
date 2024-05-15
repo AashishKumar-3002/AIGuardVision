@@ -74,5 +74,5 @@ Here are some screenshots demonstrating the functionality of AIGuardVision:
 ![Huggingface Model card](Demo_Images/huggingface_model_card.png)
 
 ### TO test the hf model card, you can use the following link:
-`https://huggingface.co/AashishKumar/AIvisionGuard-v2`
+[Model Live](https://huggingface.co/AashishKumar/AIvisionGuard-v2)
 
