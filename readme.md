@@ -65,13 +65,15 @@ This project is licensed under the MIT License - see the
 
 Here are some screenshots demonstrating the functionality of AIGuardVision:
 
-![Login Showcase](Demo_Images/login_showcase.png)
-![Signup Store](Demo_Images/signup_store.png)
-![Predicting results](Demo_Images/prediction1.png)
-![checking upload history](Demo_Images/upload_history2.png)
-![Dashboard Uploads](Demo_Images/checking_upload.png)
-![Huggingface response](Demo_Images/hf_response.png)
-![Huggingface Model card](Demo_Images/huggingface_model_card.png)
+<img src="Demo_Images/signup_store.png" width="500">
+<img src="Demo_Images/prediction1.png" width="500">
+<img src="Demo_Images/upload_history2.png" width="500">
+<img src="Demo_Images/checking_upload.png" width="500">
+<img src="Demo_Images/hf_response.png" width="500">
+<img src="Demo_Images/huggingface_model_card.png" width="500">
+
+### TO test the hf model card, you can use the following link:
+[Model Live](https://huggingface.co/AashishKumar/AIvisionGuard-v2)
 
 ### TO test the hf model card, you can use the following link:
 [Model Live](https://huggingface.co/AashishKumar/AIvisionGuard-v2)
