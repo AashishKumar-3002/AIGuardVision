@@ -79,3 +79,6 @@ Here are some screenshots demonstrating the functionality of AIGuardVision:
 Note:
 - You can access the ppt from the following link:
 [PPT](https://docs.google.com/presentation/d/10HPHXB2H67fVZwL18s9AUNoWkhdr3aq9/edit?usp=drive_link&ouid=111300428244894422615&rtpof=true&sd=true)
+
+- You can access the report(tex file) from the following link:
+[Report](https://www.overleaf.com/project/661ec6231125c87a109d8482)
